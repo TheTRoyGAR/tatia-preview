@@ -41,3 +41,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-
 #msg{padding:14px;border:1px solid var(--line);background:#fff;display:none}
 form{grid-template-columns:minmax(0,1fr)}label{min-width:0}
 @media(max-width:600px){.row{grid-template-columns:minmax(0,1fr)}.nav .wrap{height:auto;padding-top:10px;padding-bottom:10px;flex-wrap:wrap;gap:6px}.nav nav a:first-child{margin-left:0}}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:34px}
+.gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;background:#e9e2d6}
+.credit{margin-top:14px;font-size:.82rem;color:var(--mute)}
+.gallery img{object-position:center 18%}
