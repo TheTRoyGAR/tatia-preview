@@ -8,8 +8,8 @@
     if (!url) return;
     var d = Object.fromEntries(new FormData(f).entries());
     if (d.website) return;
-    if (!d.name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email || '') || !d.place || !d.idea || !d.ok) {
-      say('Please fill in your name, a valid email, your city, your idea, and tick the box.'); return;
+    if (!d.name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email || '') || !/^\+?[0-9 ()\-]{7,20}$/.test((d.phone||'').trim()) || !d.place || !d.idea || !d.ok) {
+      say('Please fill in your name, a valid email, your mobile number with country code, your city, your idea, and tick the box.'); return;
     }
     go.disabled = true;
     fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })

@@ -47,3 +47,4 @@ form{grid-template-columns:minmax(0,1fr)}label{min-width:0}
 .gallery img{object-position:center 18%}
 .gallery{grid-template-columns:repeat(5,1fr)}
 @media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
+.row{align-items:end}
