@@ -13,7 +13,7 @@
     }
     go.disabled = true;
     fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
-      .then(function (r) { if (!r.ok) throw 0; f.reset(); say('Thank you. Your order booking was sent. TATIA™ will be in touch.'); })
+      .then(function (r) { if (!r.ok) throw 0; f.reset(); say('Thank you. Your order booking was sent. TATIA™ brand will be in touch.'); })
       .catch(function () { go.disabled = false; say('Sorry, that did not send. Please try again in a moment.'); });
   });
 })();
